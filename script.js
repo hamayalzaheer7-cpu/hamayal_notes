@@ -1,12 +1,11 @@
-
 var notes = JSON.parse(localStorage.getItem("notes")) || [];
 var notesDiv = document.getElementById("notes");
 
 // Show all notes
 function showNotes() {
     notesDiv.innerHTML = "";
-
-    for (var i = 0; i < notes.length; i++) {
+    var i = 0
+    for (; i < notes.length; i++) {
         notesDiv.innerHTML += `
             <div class="note">
                 <p>${notes[i]}</p>
